@@ -24,7 +24,7 @@
     "socket.io": "^1.4.6"
   },
   "engines": {
-    "node": "4.4.1"
+    "node": "6.2.0"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
