@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/:path', (req, res) => {
+  res.sendFile(__dirname + '/' + req.params.path)
+})
+
 io.on('connection', socket => {
   console.log('a user connected')
   socket.on('chat message', (msg) => {
@@ -20,5 +24,5 @@ io.on('connection', socket => {
 })
 const port = process.env.PORT || 3000
 http.listen(port, () => {
-  console.log('listening on *:3000')
+  console.log('listening on *:', port)
 })
