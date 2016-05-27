@@ -1,0 +1,33 @@
+{
+  "name": "socket.io-playground",
+  "version": "0.1.0",
+  "description": "A Socket.io real-time chat app",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js",
+    "dev": "webpack-dev-server --content-base public --host 192.168.1.108 --inline --hot",
+    "deploy": "NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valmassoi/socket.io-playground.git"
+  },
+  "author": "valmassoi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valmassoi/socket.io-playground/issues"
+  },
+  "homepage": "https://github.com/valmassoi/socket.io-playground#readme",
+  "dependencies": {
+    "express": "^4.10.2"
+  },
+  "engines": {
+    "node": "4.4.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0"
+  }
+}
