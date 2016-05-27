@@ -1,12 +1,24 @@
 'use strict'
 
-var app = require('express')();
-var http = require('http').Server(app);
+const app = require('express')()
+const http = require('http').Server(app)
+// initialize a new instance of socket.io by passing the http (the HTTP server) object
+const io = require('socket.io')(http)
 
-app.get('/', function(req, res){
-  res.send('<h1>Hello world</h1>');
-});
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
-});
+io.on('connection', socket => {
+  console.log('a user connected')
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg)
+  })
+ //  socket.on('disconnect', () => {
+ //   console.log('user disconnected')
+ // })
+})
+const port = process.env.PORT || 3000
+http.listen(port, () => {
+  console.log('listening on *:3000')
+})

@@ -1,4 +1,4 @@
-# socket.io-playground
+# socket.io-chat
 A `Web Sockets` real-time chat app using `Socket.io`
 
 ## Live Demo

@@ -1,7 +1,7 @@
 {
-  "name": "socket.io-playground",
+  "name": "socket.io-chat",
   "version": "0.1.0",
-  "description": "A Socket.io real-time chat app",
+  "description": "A Socket.io real-time chat app demo, based on http://socket.io/get-started/chat/",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,16 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valmassoi/socket.io-playground.git"
+    "url": "git+https://github.com/valmassoi/socket.io-chat.git"
   },
   "author": "valmassoi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/valmassoi/socket.io-playground/issues"
+    "url": "https://github.com/valmassoi/socket.io-chat/issues"
   },
-  "homepage": "https://github.com/valmassoi/socket.io-playground#readme",
+  "homepage": "https://github.com/valmassoi/socket.io-chat#readme",
   "dependencies": {
-    "express": "^4.10.2"
+    "express": "^4.10.2",
+    "socket.io": "^1.4.6"
   },
   "engines": {
     "node": "4.4.1"
